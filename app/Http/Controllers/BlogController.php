@@ -15,6 +15,8 @@ class BlogController extends Controller
     public function index()
     {
         //
+        $blg=Blog::all();
+        return $blg;
     }
 
     /**

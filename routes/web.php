@@ -19,3 +19,6 @@ Route::get('/', function () {
     $comment1=App\Comment::find(2); 
     echo $comment1->Msubject;
 });
+
+//index()
+Route::get('/blogs', 'BlogController@index');
