@@ -13,9 +13,9 @@
 
 Route::get('/', function () {
     //return view('welcome');
-    $subject=App\Subject::find(1);
-
+    /*$subject=App\Subject::find(1); 
+    echo $subject->Mcomments;*/
     
-       echo $subject->Mcomments;
-    
+    $comment1=App\Comment::find(2); 
+    echo $comment1->Msubject;
 });
