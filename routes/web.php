@@ -20,5 +20,6 @@ Route::get('/', function () {
     echo $comment1->Msubject;
 });
 
-//index()
+//blog section--------------------------------------------------------
 Route::get('/blogs', 'BlogController@index');
+Route::get('/blog/{blog}', 'BlogController@show');
