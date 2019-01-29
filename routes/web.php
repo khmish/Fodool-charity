@@ -27,10 +27,10 @@ Route::post('/blogUpdate', 'BlogController@update');
 Route::post('/blogInsert', 'BlogController@store');
 //********** */test***********************
 Route::get('/blog1', function(){
-    return view('blogUpdate');
+    return view('blog/blogUpdate');
 });
 Route::get('/blog2', function(){
-    return view('blogInsert');
+    return view('blog/blogInsert');
 });
 
 
