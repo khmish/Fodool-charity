@@ -25,9 +25,17 @@ Route::get('/blogs', 'BlogController@index');
 Route::get('/blog/{blog}', 'BlogController@show');
 Route::post('/blogUpdate', 'BlogController@update');
 Route::post('/blogInsert', 'BlogController@store');
+//********** */test***********************
 Route::get('/blog1', function(){
     return view('blogUpdate');
 });
 Route::get('/blog2', function(){
     return view('blogInsert');
 });
+
+
+//Subject section--------------------------------------------------------
+Route::get('/subjects', 'SubjectController@index');
+Route::get('/subject/{subject}', 'SubjectController@show');
+Route::post('/subjectUpdate', 'SubjectController@update');
+Route::post('/subjectInsert', 'SubjectController@store');
