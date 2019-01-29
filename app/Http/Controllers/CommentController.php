@@ -15,6 +15,8 @@ class CommentController extends Controller
     public function index()
     {
         //
+        $comm=Comment::all();
+        return $comm;
     }
 
     /**
@@ -36,6 +38,13 @@ class CommentController extends Controller
     public function store(Request $request)
     {
         //
+        $comm=new Comment;
+        $comm->blog_id=$request->blog_id;
+        $comm->body=$request->body;
+        $comm->user_id=$request->user_id;
+        $comm->state=$request->state;
+        $comm->save();
+        return $comm;
     }
 
     /**
@@ -47,6 +56,8 @@ class CommentController extends Controller
     public function show(comment $comment)
     {
         //
+        $comm=Comment::find($comment->id);
+        return $comm;
     }
 
     /**
@@ -67,9 +78,16 @@ class CommentController extends Controller
      * @param  \App\comment  $comment
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, comment $comment)
+    public function update(Request $request)
     {
         //
+        $comm=Comment::find($request->id);
+        $comm->blog_id=$request->blog_id;
+        $comm->body=$request->body;
+        $comm->user_id=$request->user_id;
+        $comm->state=$request->state;
+        $comm->save();
+        return $comm;
     }
 
     /**
@@ -81,5 +99,8 @@ class CommentController extends Controller
     public function destroy(comment $comment)
     {
         //
+        $comm=Comment::find($comment->id);
+        $comm->state=2;
+        return $comm;
     }
 }

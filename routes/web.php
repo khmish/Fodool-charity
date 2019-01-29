@@ -39,3 +39,10 @@ Route::get('/subjects', 'SubjectController@index');
 Route::get('/subject/{subject}', 'SubjectController@show');
 Route::post('/subjectUpdate', 'SubjectController@update');
 Route::post('/subjectInsert', 'SubjectController@store');
+
+
+//Comment section--------------------------------------------------------
+Route::get('/comments', 'CommentController@index');
+Route::get('/comment/{comment}', 'CommentController@show');
+Route::post('/commentUpdate', 'CommentController@update');
+Route::post('/commentInsert', 'CommentController@store');
