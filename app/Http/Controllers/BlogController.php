@@ -38,6 +38,7 @@ class BlogController extends Controller
     public function store(Request $request)
     {
         //
+
     }
 
     /**
@@ -71,9 +72,17 @@ class BlogController extends Controller
      * @param  \App\blog  $blog
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, blog $blog)
+    public function update(Request $request)
     {
         //
+        $blg=Blog::find($request->id);
+        $blg->name=$request->name;
+        $blg->description=$request->description;
+        $blg->type=$request->type;
+        $blg->state=$request->state;
+        $blg->save();
+        return $blg;
+        //return $request;
     }
 
     /**
@@ -85,5 +94,8 @@ class BlogController extends Controller
     public function destroy(blog $blog)
     {
         //
+        $blg=Blog::find($blog->id);
+        $blg->state=2;
+        return $blg;
     }
 }

@@ -12,14 +12,19 @@
 */
 
 Route::get('/', function () {
-    //return view('welcome');
+    return view('welcome');
     /*$subject=App\Subject::find(1); 
-    echo $subject->Mcomments;*/
+    echo $subject->Mcomments;
     
     $comment1=App\Comment::find(2); 
-    echo $comment1->Msubject;
+    echo $comment1->Msubject;*/
 });
 
 //blog section--------------------------------------------------------
 Route::get('/blogs', 'BlogController@index');
 Route::get('/blog/{blog}', 'BlogController@show');
+Route::post('/blog', 'BlogController@update');
+
+Route::get('/blog1', function(){
+    return view('blogUpdate');
+});
