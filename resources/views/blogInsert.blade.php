@@ -6,14 +6,13 @@
 <body>
     
 
-<form class="border border-light p-5" method="POST" action="/blogUpdate" > 
+<form class="border border-light p-5" method="POST" action="/blogInsert" > 
 
 @csrf
 <p class="h4 mb-4 text-center">Blog</p>
 
 
-    <input name="id" class="form-control mb-4" id="id" type="text" placeholder="id">
-
+    
     <input name="name" class="form-control mb-4" id="name" type="text" placeholder="name">
 
     <textarea name="description" class="form-control mb-4" id="description" placeholder="description"></textarea>

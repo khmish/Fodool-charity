@@ -38,6 +38,13 @@ class BlogController extends Controller
     public function store(Request $request)
     {
         //
+        $blg= new Blog;
+        $blg->name=$request->name;
+        $blg->description=$request->description;
+        $blg->type=$request->type;
+        $blg->state=$request->state;
+        $blg->save();
+        return $blg;
 
     }
 

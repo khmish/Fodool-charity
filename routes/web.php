@@ -23,8 +23,11 @@ Route::get('/', function () {
 //blog section--------------------------------------------------------
 Route::get('/blogs', 'BlogController@index');
 Route::get('/blog/{blog}', 'BlogController@show');
-Route::post('/blog', 'BlogController@update');
-
+Route::post('/blogUpdate', 'BlogController@update');
+Route::post('/blogInsert', 'BlogController@store');
 Route::get('/blog1', function(){
     return view('blogUpdate');
+});
+Route::get('/blog2', function(){
+    return view('blogInsert');
 });
