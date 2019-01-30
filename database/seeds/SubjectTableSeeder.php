@@ -20,15 +20,14 @@ class SubjectTableSeeder extends Seeder
                     'description' => $faker->sentence,
                     'picture' =>'something',
                     'body' => $faker->paragraph,
-                    'blog_id' => $faker->numberBetween($min = 1, $max = 20),
-                    'user_id' => $faker->numberBetween($min = 1, $max = 20),
+                    'blog_id' => $faker->numberBetween($min = 1, $max = 21),
+                    'user_id' => $faker->numberBetween($min = 1, $max = 21),
                     'count_view' => $faker->numberBetween($min = 0, $max = 1000),
                     'is_published' => $faker->numberBetween($min = 0, $max = 1),
                     'published_date' => $faker->date,
                     'state' => $faker->numberBetween($min = 0, $max = 4),
                     'created_at'=>now(),
-                    'updated_at'=>now(),
-                    'state'=>0
+                    'updated_at'=>now()
                 ]);
         endfor;
     }

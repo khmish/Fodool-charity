@@ -18,7 +18,7 @@ class CreateSubjectsTable extends Migration
             $table->string('tile',50);
             $table->string('description',313);
             $table->string('picture',313);
-            $table->text('body');
+            $table->longText('body');
             $table->integer('count_view');
             $table->integer('blog_id');
             $table->integer('user_id');
