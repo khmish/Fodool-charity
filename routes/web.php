@@ -46,3 +46,5 @@ Route::get('/comments', 'CommentController@index');
 Route::get('/comment/{comment}', 'CommentController@show');
 Route::post('/commentUpdate', 'CommentController@update');
 Route::post('/commentInsert', 'CommentController@store');
+
+Route::get('/comment1/{comment}', 'CommentController@something');

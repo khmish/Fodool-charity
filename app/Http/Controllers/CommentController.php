@@ -89,6 +89,12 @@ class CommentController extends Controller
         $comm->save();
         return $comm;
     }
+    public function something(Comment $comment)
+    {
+        $comm=Comment::where('state',0)->get();
+        
+        return $comm;
+    }
 
     /**
      * Remove the specified resource from storage.
